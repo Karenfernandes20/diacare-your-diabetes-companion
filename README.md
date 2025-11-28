@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# DiaCare - Controle Inteligente de Diabetes
 
-## Project info
+DiaCare é um aplicativo completo de gerenciamento de diabetes que combina tecnologia de ponta com cuidados personalizados para ajudar diabéticos a viver melhor.
+
+## 🌟 Funcionalidades Principais
+
+- **Questionário Personalizado**: Avaliação completa em 6 passos para criar seu perfil único
+- **Receitas Premium**: Mais de 200 receitas personalizadas adaptadas ao seu tipo de diabetes e objetivos
+- **Assistente IA Médica 24h**: Tire dúvidas e receba orientações a qualquer momento
+- **Controle de Glicose**: Registre e monitore seus níveis de glicemia (em desenvolvimento)
+- **Gerenciamento de Medicamentos**: Controle de doses e horários (em desenvolvimento)
+- **Plano Premium**: 14 dias grátis com acesso completo
+
+## 🚀 Tecnologias Utilizadas
+
+- **React** - Framework de UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização moderna e responsiva
+- **shadcn/ui** - Componentes UI de alta qualidade
+- **Lucide React** - Ícones modernos
+- **Vite** - Build tool rápido
+
+## 💚 Design System
+
+O DiaCare utiliza um design system personalizado com:
+- Cores em tons de verde (saúde) e azul (confiança)
+- Gradientes suaves e modernos
+- Componentes acessíveis e responsivos
+- Animações e transições polidas
+
+## 📱 Estrutura do Aplicativo
+
+1. **Landing Page**: Apresentação do produto com features, preços e depoimentos
+2. **Quiz (6 Passos)**:
+   - Informações básicas
+   - Medidas físicas e histórico
+   - Seleção de medicamentos
+   - Configuração de doses
+   - Objetivos e metas
+   - Confirmação e ativação Premium
+3. **Dashboard**: Visão geral com acesso rápido às funcionalidades
+4. **Receitas**: Biblioteca completa com receitas personalizadas para cada refeição
+5. **Chat IA**: Assistente médica com respostas contextuais
+
+## 🎯 Público-Alvo
+
+- Pessoas com Diabetes Tipo 1
+- Pessoas com Diabetes Tipo 2
+- Gestantes com Diabetes Gestacional
+- Pessoas com Pré-diabetes
+
+## 📞 Suporte
+
+Este aplicativo não substitui consultas médicas. Sempre consulte seu médico para orientações personalizadas.
+
+---
+
+## Project Info (Lovable)
 
 **URL**: https://lovable.dev/projects/b7f4f7a1-24ab-4f46-b50b-2fa48e215d51
 
-## How can I edit this code?
+## How to Edit
 
-There are several ways of editing your application.
+Visit the [Lovable Project](https://lovable.dev/projects/b7f4f7a1-24ab-4f46-b50b-2fa48e215d51) and start prompting.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b7f4f7a1-24ab-4f46-b50b-2fa48e215d51) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+For local development:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deploy
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b7f4f7a1-24ab-4f46-b50b-2fa48e215d51) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Open [Lovable](https://lovable.dev/projects/b7f4f7a1-24ab-4f46-b50b-2fa48e215d51) and click on Share → Publish.
