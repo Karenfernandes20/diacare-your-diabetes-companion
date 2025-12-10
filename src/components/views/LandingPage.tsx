@@ -123,7 +123,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
           <p className="text-center text-muted-foreground mb-12">
             Escolha o plano ideal para suas necessidades
           </p>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <PricingCard
               title="Plano Gratuito"
               price="R$ 0"
@@ -149,8 +149,24 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
                 "Assistente IA médica 24h",
                 "Relatórios médicos completos",
                 "Análises avançadas e insights",
-                "Suporte prioritário",
-                "Sincronização com dispositivos"
+                "Suporte prioritário"
+              ]}
+              onSelect={processarPagamento}
+            />
+            <PricingCard
+              title="Plano Platinum"
+              price="R$ 49,90"
+              period="mês"
+              isPremium
+              badge="Mais Completo"
+              features={[
+                "Tudo do plano Premium",
+                "Acompanhamento nutricional",
+                "Consultas com especialistas",
+                "Planos de exercícios personalizados",
+                "Integração com smartwatches",
+                "Suporte VIP 24h",
+                "Análises preditivas avançadas"
               ]}
               onSelect={processarPagamento}
             />
