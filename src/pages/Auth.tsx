@@ -151,7 +151,7 @@ const Auth = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Activity className="h-10 w-10 text-primary" />
             <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              DiaCare
+              Gliccare
             </span>
           </div>
           <CardTitle className="text-2xl">

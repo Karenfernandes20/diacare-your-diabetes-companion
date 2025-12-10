@@ -49,7 +49,7 @@ export function AppView({ userProfile, onOpenChat, onLogout }: AppViewProps) {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground">DiaCare</h1>
+              <h1 className="text-2xl font-bold text-foreground">Gliccare</h1>
               <p className="text-sm text-muted-foreground">Olá, {userProfile.nome}!</p>
             </div>
             <div className="flex items-center gap-2">
@@ -112,7 +112,7 @@ export function AppView({ userProfile, onOpenChat, onLogout }: AppViewProps) {
             )}
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">Bem-vindo ao DiaCare</h2>
+              <h2 className="text-2xl font-bold mb-4">Bem-vindo ao Gliccare</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 <Card 
                   className="p-6 cursor-pointer hover:shadow-medium transition-all"

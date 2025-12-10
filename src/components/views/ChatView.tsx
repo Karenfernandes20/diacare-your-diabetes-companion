@@ -63,7 +63,7 @@ export function ChatView({ messages, onSendMessage, onBack, userName }: ChatView
               <Sparkles className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h1 className="font-bold">Assistente IA DiaCare</h1>
+              <h1 className="font-bold">Assistente IA Gliccare</h1>
               <p className="text-sm text-muted-foreground">Online 24h</p>
             </div>
           </div>
