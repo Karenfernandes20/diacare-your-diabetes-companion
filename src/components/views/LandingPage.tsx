@@ -31,7 +31,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Activity className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">DiaCare</span>
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">Gliccare</span>
           </div>
           <div className="flex items-center gap-3">
             <Button variant="ghost" onClick={onLogin} className="gap-2">
@@ -50,7 +50,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
             <Star className="h-4 w-4 mr-1 fill-primary" />
-            Mais de 50.000 diabéticos confiam no DiaCare
+            Mais de 50.000 diabéticos confiam no Gliccare
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Controle seu Diabetes<br />com Inteligência
@@ -185,7 +185,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
             <TestimonialCard
               name="Maria Silva"
               role="Tipo 2 há 5 anos"
-              content="O DiaCare mudou completamente minha rotina! As receitas são deliciosas e minha hemoglobina glicada melhorou significativamente."
+              content="O Gliccare mudou completamente minha rotina! As receitas são deliciosas e minha hemoglobina glicada melhorou significativamente."
               rating={5}
             />
             <TestimonialCard
@@ -209,7 +209,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">DiaCare</h3>
+              <h3 className="font-bold text-lg mb-4">Gliccare</h3>
               <p className="text-sm text-muted-foreground">
                 Seu parceiro no controle do diabetes
               </p>
@@ -240,7 +240,7 @@ export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2024 DiaCare. Todos os direitos reservados.</p>
+            <p>© 2024 Gliccare. Todos os direitos reservados.</p>
             <p className="mt-2">
               Este app não substitui consultas médicas. Sempre consulte seu médico.
             </p>
