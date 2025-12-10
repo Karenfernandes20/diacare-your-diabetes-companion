@@ -1,15 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Activity, Heart, MessageSquare, Bell, FileText, Trophy, Star, ArrowRight } from "lucide-react";
+import { Activity, Heart, MessageSquare, Bell, FileText, Trophy, Star, ArrowRight, User, LogIn } from "lucide-react";
 import { FeatureCard } from "@/components/FeatureCard";
 import { PricingCard } from "@/components/PricingCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 
 interface LandingPageProps {
   onStartQuiz: () => void;
+  onLogin?: () => void;
+  onSignup?: () => void;
 }
 
-export function LandingPage({ onStartQuiz }: LandingPageProps) {
+export function LandingPage({ onStartQuiz, onLogin, onSignup }: LandingPageProps) {
   const scrollToTestimonials = () => {
     document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -24,6 +26,25 @@ export function LandingPage({ onStartQuiz }: LandingPageProps) {
 
   return (
     <div className="min-h-screen">
+      {/* Header/Navbar */}
+      <header className="bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Activity className="h-8 w-8 text-primary" />
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">DiaCare</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" onClick={onLogin} className="gap-2">
+              <LogIn className="h-4 w-4" />
+              Login
+            </Button>
+            <Button onClick={onSignup} className="gap-2">
+              <User className="h-4 w-4" />
+              Cadastrar
+            </Button>
+          </div>
+        </div>
+      </header>
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
