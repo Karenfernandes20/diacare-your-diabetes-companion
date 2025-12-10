@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { LandingPage } from "@/components/views/LandingPage";
 import { QuizView } from "@/components/views/QuizView";
 import { AppView } from "@/components/views/AppView";
 import { ChatView } from "@/components/views/ChatView";
 import { UserProfile, ChatMessage } from "@/types";
 import { getAIResponse } from "@/utils/aiHelper";
+import { useAuth } from "@/hooks/useAuth";
+import { Loader2 } from "lucide-react";
 
 type ViewType = 'landing' | 'quiz' | 'app' | 'chat';
 
 const Index = () => {
+  const navigate = useNavigate();
+  const { user, loading, signOut } = useAuth();
   const [currentView, setCurrentView] = useState<ViewType>('landing');
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
@@ -20,8 +25,31 @@ const Index = () => {
     }
   ]);
 
+  useEffect(() => {
+    if (!loading && user) {
+      // User is logged in, go to quiz or app
+      if (!userProfile) {
+        setCurrentView('quiz');
+      } else {
+        setCurrentView('app');
+      }
+    }
+  }, [user, loading, userProfile]);
+
+  const handleLogin = () => {
+    navigate("/auth");
+  };
+
+  const handleSignup = () => {
+    navigate("/auth");
+  };
+
   const handleStartQuiz = () => {
-    setCurrentView('quiz');
+    if (user) {
+      setCurrentView('quiz');
+    } else {
+      navigate("/auth");
+    }
   };
 
   const handleCompleteQuiz = (profile: UserProfile) => {
@@ -35,6 +63,12 @@ const Index = () => {
 
   const handleBackToApp = () => {
     setCurrentView('app');
+  };
+
+  const handleLogout = async () => {
+    await signOut();
+    setUserProfile(null);
+    setCurrentView('landing');
   };
 
   const handleSendMessage = (message: string) => {
@@ -61,12 +95,30 @@ const Index = () => {
     }, 1500);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-hero">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
   return (
     <>
-      {currentView === 'landing' && <LandingPage onStartQuiz={handleStartQuiz} />}
+      {currentView === 'landing' && (
+        <LandingPage 
+          onStartQuiz={handleStartQuiz} 
+          onLogin={handleLogin}
+          onSignup={handleSignup}
+        />
+      )}
       {currentView === 'quiz' && <QuizView onComplete={handleCompleteQuiz} />}
       {currentView === 'app' && userProfile && (
-        <AppView userProfile={userProfile} onOpenChat={handleOpenChat} />
+        <AppView 
+          userProfile={userProfile} 
+          onOpenChat={handleOpenChat}
+          onLogout={handleLogout}
+        />
       )}
       {currentView === 'chat' && userProfile && (
         <ChatView 

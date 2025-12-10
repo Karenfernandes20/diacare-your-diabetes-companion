@@ -12,17 +12,19 @@ import {
   Pill, 
   Crown, 
   Sparkles,
-  RefreshCw 
+  RefreshCw,
+  LogOut 
 } from "lucide-react";
 
 interface AppViewProps {
   userProfile: UserProfile;
   onOpenChat: () => void;
+  onLogout?: () => void;
 }
 
 type TabType = 'dashboard' | 'receitas' | 'glicose' | 'medicamentos';
 
-export function AppView({ userProfile, onOpenChat }: AppViewProps) {
+export function AppView({ userProfile, onOpenChat, onLogout }: AppViewProps) {
   const [currentTab, setCurrentTab] = useState<TabType>('dashboard');
   
   const [receitasManha, setReceitasManha] = useState<Receita[]>(getReceitasPorTurno('manha', 3));
@@ -61,6 +63,11 @@ export function AppView({ userProfile, onOpenChat }: AppViewProps) {
                 <MessageSquare className="h-5 w-5 mr-2" />
                 IA Médica
               </Button>
+              {onLogout && (
+                <Button onClick={onLogout} variant="outline" size="icon">
+                  <LogOut className="h-4 w-4" />
+                </Button>
+              )}
             </div>
           </div>
           
